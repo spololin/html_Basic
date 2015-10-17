@@ -39,16 +39,42 @@
     <div class="container">
 
         <h1>Средства для ухода</h1>
-
+        
+        <!-- Неверно, тег основной навигации здесь не подходит, поэтому nav меняем на ul, так как это список. Распорка clearfix здесь тоже не нужна -->
         <nav class="breadcrumbs clearfix">
             <a class="breadcrumbs-item" href="#">Главная</a>
             <a class="breadcrumbs-item" href="#">Магазин</a>
             <span class="breadcrumbs-item">Средства для ухода</span>
         </nav>
+        <!--Итого разметка хлебных крошек-->
+        <ul class="breadcrumbs">
+           <li class="breadcrumbs-item"><a class="breadcrumbs-link" href="#">Главная</a></li>
+           <li class="breadcrumbs-item"><a class="breadcrumbs-item" href="#">Магазин</a></li>
+           <li class="breadcrumbs-item">Средства для ухода</li>
+        </ul>
+        <!---->
         
+        <!-- лучше все таки catalog тут класс-->
         <div class="content-container">
+            <!-- форма - внутри aside и ей не нужен класс-->
             <form class="form" method="post">
+                <!-- catalog-sidebar -->
                 <aside class="sidebar-catalog">
+                    <!-- лишняя обертка отсбда и до конца формы  у тебя только 
+                        h2
+                        input
+                        label
+                        input
+                        label
+                        ...
+                        h2
+                        input
+                        label
+                        input
+                        label
+                        
+                        без всяких там дивов и списков
+                    -->
                     <div class="producer">
                         <h2 class="filter-title">Производители:</h2>
                         <ul>
@@ -99,17 +125,28 @@
                     <a href="#" class="btn">Показать</a>
                 </form>
             </aside>
-
+            
+            <!-- сatalog-contant -->
             <div class="container-content">
+                <!-- лишняя обертка -->
                 <div class="product-cards">
+                    <!-- catalog-item и это можно сделать артиклом а не секцией
+                        Классы внутри сделай в пространстве имен catalog-item
+                        типа catalog-item-image
+                        catalog-item-title
+                        и тд
+                    -->
                     <section class="product-card">
                         <a class="image-item" href="#">
                             <img src="http://placehold.it/150x100" alt="Набор для путешествий" width="220" height="165">
                         </a>
                         <div class="description-product">
+                            <!-- Это заголовок h1-->
                             <div class="category-item">Набор для путешествий</div>
+                            <!-- А это спан внутри заголовка-->
                             <div class="name-item">"Baxter of california"</div>
                         </div>
+                        <!-- Блок цены внутри блока description-->
                         <div class="price">
                             <div class="cost">2 900 руб.</div>
                             <a class="btn">Купить</a>
@@ -181,7 +218,9 @@
                         </div>
                     </section>
                 </div>
-
+                
+                <!--здесь по аналогии с хлебными крошками 
+                ul>li>a-->
                 <div class="page-number">
                     <a href="#" class="btn">1</a>
                     <a href="#" class="btn active">2</a>
