@@ -40,193 +40,145 @@
 
         <h1>Средства для ухода</h1>
         
-        <!-- Неверно, тег основной навигации здесь не подходит, поэтому nav меняем на ul, так как это список. Распорка clearfix здесь тоже не нужна -->
-        <nav class="breadcrumbs clearfix">
-            <a class="breadcrumbs-item" href="#">Главная</a>
-            <a class="breadcrumbs-item" href="#">Магазин</a>
-            <span class="breadcrumbs-item">Средства для ухода</span>
-        </nav>
-        <!--Итого разметка хлебных крошек-->
         <ul class="breadcrumbs">
            <li class="breadcrumbs-item"><a class="breadcrumbs-link" href="#">Главная</a></li>
-           <li class="breadcrumbs-item"><a class="breadcrumbs-item" href="#">Магазин</a></li>
+           <li class="breadcrumbs-item"><a class="breadcrumbs-link" href="#">Магазин</a></li>
            <li class="breadcrumbs-item">Средства для ухода</li>
         </ul>
-        <!---->
-        
-        <!-- лучше все таки catalog тут класс-->
-        <div class="content-container">
-            <!-- форма - внутри aside и ей не нужен класс-->
-            <form class="form" method="post">
-                <!-- catalog-sidebar -->
-                <aside class="sidebar-catalog">
-                    <!-- лишняя обертка отсбда и до конца формы  у тебя только 
-                        h2
-                        input
-                        label
-                        input
-                        label
-                        ...
-                        h2
-                        input
-                        label
-                        input
-                        label
-                        
-                        без всяких там дивов и списков
-                    -->
-                    <div class="producer">
-                        <h2 class="filter-title">Производители:</h2>
-                        <ul>
-                            <li>
-                                <input class="input-check" type="checkbox" id="brand1" name="brand" checked>
-                                <label for="brand1">Baxter of california</label>
-                            </li>
-                            <li>
-                                <input class="input-check" type="checkbox" id="brand2" name="brand">
-                                <label for="brand2">Mr Natty</label>
-                            </li>
-                            <li>
-                                <input class="input-check" type="checkbox" id="brand3" name="brand" checked>
-                                <label for="brand3">Suavecito</label>
-                            </li>
-                            <li>
-                                <input class="input-check" type="checkbox" id="brand4" name="brand">
-                                <label for="brand4">Malin+Goetz</label>
-                            </li>
-                            <li>
-                                <input class="input-check" type="checkbox" id="brand5" name="brand">
-                                <label for="brand5">Murray's</label>
-                            </li>
-                            <li>
-                                <input class="input-check" type="checkbox" id="brand6" name="brand" checked>
-                                <label for="brand6">American crew</label>
-                            </li>
-                        </ul>
-                    </div>
 
-                    <div class="group-items">
-                        <h2 class="filter-title">Группы товаров:</h2>
-                        <ul>
-                            <li>
-                                <input class="input-radio" type="radio" id="group1" name="group" checked>
-                                <label for="group1">Бритвенные принадлежности</label>
-                            </li>
-                            <li>
-                                <input class="input-radio" type="radio" id="group2" name="group">
-                                <label for="group2">Средства для ухода</label>
-                            </li>
-                            <li>
-                                <input class="input-radio" type="radio" id="group3" name="group">
-                                <label for="group3">Аксессуары</label>                    
-                            </li>
-                        </ul>
-                    </div>
+        <div class="catalog">
+            <aside class="sidebar-catalog">
+                <form method="post">
+                    
+                    <h2 class="filter-title">Производители:</h2>
+                    <input class="input-check" type="checkbox" id="brand1" name="brand" checked>
+                    <label for="brand1">Baxter of california</label>
+                    <input class="input-check" type="checkbox" id="brand2" name="brand">
+                    <label for="brand2">Mr Natty</label>
+                    <input class="input-check" type="checkbox" id="brand3" name="brand" checked>
+                    <label for="brand3">Suavecito</label>
+                    <input class="input-check" type="checkbox" id="brand4" name="brand">
+                    <label for="brand4">Malin+Goetz</label>
+                    <input class="input-check" type="checkbox" id="brand5" name="brand">
+                    <label for="brand5">Murray's</label>
+                    <input class="input-check" type="checkbox" id="brand6" name="brand" checked>
+                    <label for="brand6">American crew</label>
+
+                    <h2 class="filter-title">Группы товаров:</h2>
+                    <input class="input-radio" type="radio" id="group1" name="group" checked>
+                    <label for="group1">Бритвенные принадлежности</label>
+                    <input class="input-radio" type="radio" id="group2" name="group">
+                    <label for="group2">Средства для ухода</label>
+                    <input class="input-radio" type="radio" id="group3" name="group">
+                    <label for="group3">Аксессуары</label>                    
+
                     <a href="#" class="btn">Показать</a>
                 </form>
             </aside>
-            
-            <!-- сatalog-contant -->
-            <div class="container-content">
-                <!-- лишняя обертка -->
-                <div class="product-cards">
-                    <!-- catalog-item и это можно сделать артиклом а не секцией
-                        Классы внутри сделай в пространстве имен catalog-item
-                        типа catalog-item-image
-                        catalog-item-title
-                        и тд
-                    -->
-                    <section class="product-card">
-                        <a class="image-item" href="#">
-                            <img src="http://placehold.it/150x100" alt="Набор для путешествий" width="220" height="165">
-                        </a>
-                        <div class="description-product">
-                            <!-- Это заголовок h1-->
-                            <div class="category-item">Набор для путешествий</div>
-                            <!-- А это спан внутри заголовка-->
-                            <div class="name-item">"Baxter of california"</div>
-                        </div>
-                        <!-- Блок цены внутри блока description-->
-                        <div class="price">
-                            <div class="cost">2 900 руб.</div>
+
+            <div class="catalog-contant">
+                <article class="catalog-item">
+                    <a class="catalog-item-image" href="#">
+                        <img src="http://placehold.it/150x100" alt="Набор для путешествий" width="220" height="165">
+                    </a>
+                    <div class="catalog-item-description">
+                        <h1 class="catalog-item-title">
+                            Набор для путешествий
+                            <span>"Baxter of california"</span>
+                        </h1>
+                        <div class="catalog-item-price">
+                            <div class="catalog-item-cost">2 900 руб.</div>
                             <a class="btn">Купить</a>
                         </div>
-                    </section>
-                    <section class="product-card">
-                        <a class="image-item" href="#">
-                            <img src="http://placehold.it/150x100" alt="Увлажняющий кондиционер" width="220" height="165">
-                        </a>
-                        <div class="description-product">
-                            <div class="category-item">Увлажняющий кондицирнер</div>
-                            <div class="name-item">"Baxter of california"</div>
-                        </div>
-                        <div class="price">
-                            <div class="cost">750 руб.</div>
+                    </div>
+                </article>
+
+                <article class="catalog-item">
+                    <a class="catalog-item-image" href="#">
+                        <img src="http://placehold.it/150x100" alt="Увлажняющий кондиционер" width="220" height="165">
+                    </a>
+                    <div class="catalog-item-description">
+                        <h1 class="category-item-title">
+                            Увлажняющий кондицирнер
+                            <span>"Baxter of california"</span>
+                        </h1>
+                        <div class="catalog-item-price">
+                            <div class="catalog-item-cost">750 руб.</div>
                             <a class="btn">Купить</a>
                         </div>
-                    </section>
-                    <section class="product-card">
-                        <a class="image-item" href="#">
-                            <img src="http://placehold.it/150x100" alt="Гель для волос" width="220" height="165">
-                        </a>
-                        <div>
-                            <div class="category-item">Гель для волос</div>
-                            <div class="name-item">"Сauvecito"</div>
-                        </div>
-                        <div class="price">
-                            <div class="cost">290 руб.</div>
+                    </div>
+                </article>
+
+                <article class="catalog-item">
+                    <a class="catalog-item-image" href="#">
+                        <img src="http://placehold.it/150x100" alt="Гель для волос" width="220" height="165">
+                    </a>
+                    <div class="catalog-item-description">
+                        <h1 class="catalog-item-title">
+                            Гель для волос
+                            <span>"Сauvecito"</span>
+                        </h1>
+                        <div class="catalog-item-price">
+                            <div class="catalog-item-cost">290 руб.</div>
                             <a class="btn">Купить</a>
                         </div>
-                    </section>
-                    <section class="product-card">
-                        <a class="image-item" href="#">
-                            <img src="http://placehold.it/150x100" alt="Глина для укладки волос" width="220" height="165">
-                        </a>
-                        <div class="description-product">
-                            <div class="category-item">Глина для укладки волос</div>
-                            <div class="name-item">"American crew"</div>
-                        </div>
-                        <div class="price">
-                            <div class="cost">500 руб.</div>
+                    </div>
+                </article>
+
+                <article class="catalog-item">
+                    <a class="catalog-item-image" href="#">
+                        <img src="http://placehold.it/150x100" alt="Глина для укладки волос" width="220" height="165">
+                    </a>
+                    <div class="catalog-item-description">
+                        <h1 class="category-item">
+                            Глина для укладки волос
+                            <span>"American crew"</span>    
+                        </h1>
+                        <div class="catalog-item-price">
+                            <div class="catalog-item-cost">500 руб.</div>
                             <a class="btn">Купить</a>
                         </div>
-                    </section>
-                    <section class="product-card">
-                        <a class="image-item" href="#">
-                            <img src="http://placehold.it/150x100" alt="Гель для волос" width="220" height="165">
-                        </a>
-                        <div class="description-product">
-                            <div class="category-item">Гель для волос</div>
-                            <div class="name-item">"American crew"</div>
-                        </div>
-                        <div class="price">
-                            <div class="cost">300 руб.</div>
+                    </div>
+                </article>
+
+                <article class="catalog-item">
+                    <a class="catalog-item-image" href="#">
+                        <img src="http://placehold.it/150x100" alt="Гель для волос" width="220" height="165">
+                    </a>
+                    <div class="catalog-item-description">
+                        <h1 class="category-item">
+                            Гель для волос
+                            <span>"American crew"</span>
+                        </h1>
+                        <div class="catalog-item-price">
+                            <div class="catalog-item-cost">300 руб.</div>
                             <a class="btn">Купить</a>
                         </div>
-                    </section>
-                    <section class="product-card">
-                        <a class="image-item" href="#">
-                            <img src="http://placehold.it/150x100" alt="Набор для бритья" width="220" height="165">
-                        </a>
-                        <div class="description-product">
-                            <div class="category-item">Набор для бритья</div>
-                            <div class="name-item">"Baxter of california"</div>
-                        </div>
-                        <div class="price">
-                            <div class="cost">3 900 руб.</div>
+                    </div>
+                </article>
+
+                <article class="catalog-item">
+                    <a class="catalog-item-image" href="#">
+                        <img src="http://placehold.it/150x100" alt="Набор для бритья" width="220" height="165">
+                    </a>
+                    <div class="catalog-item-description">
+                        <h1 class="category-item">
+                            Набор для бритья
+                            <span>"Baxter of california"</span>
+                        </h1>
+                        <div class="catalog-item-price">
+                            <div class="catalog-item-cost">3 900 руб.</div>
                             <a class="btn">Купить</a>
                         </div>
-                    </section>
-                </div>
-                
-                <!--здесь по аналогии с хлебными крошками 
-                ul>li>a-->
-                <div class="page-number">
-                    <a href="#" class="btn">1</a>
-                    <a href="#" class="btn active">2</a>
-                    <a href="#" class="btn">3</a>
-                    <a href="#" class="btn">4</a>
-                </div>
+                    </div>
+                </article>
+
+                <ul class="page-number">
+                    <li><a href="#" class="btn">1</a></li>
+                    <li><a href="#" class="btn active">2</a></li>
+                    <li><a href="#" class="btn">3</a></li>
+                    <li><a href="#" class="btn">4</a></li>
+                </ul>
             </div>
         </div>
     </div>
