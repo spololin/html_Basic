@@ -1,9 +1,72 @@
 body{
+    min-width: 960px;
     font-size: 14px;
     line-height: normal;
     color: #000000;
     font-weight: normal;
     font-family: "PTSans NarrowBold", "PT Sans", "Arial", serif;
+}
+
+.container{
+    width: 940px;
+    margin: 0 auto;
+    outline: 1px dotted blue;
+}
+
+.clearfix:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.inner-page{
+    background: url("/img/bg_catalog.png") repeat 0 0;
+}
+
+.main-header{
+    margin-bottom: 60px;
+    background: #000000;
+    color: #fff;
+}
+
+.main-navigation{
+    float:left;
+    max-width: 700px;
+}
+
+.main-navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+}
+
+.main-navigation li {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+}
+
+.main-navigation li a {
+    display: block;
+    padding: 26px 21px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.user-block {    
+    float: right;
+    font-size: 0;
+    max-width: 140px;
+}
+
+.user-block .login {
+    display: block;
+    padding: 26px 0px;
+    padding-right: 21px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
 }
 
 h1{
