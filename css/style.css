@@ -36,6 +36,10 @@ body{
     color: #fff;
 }
 
+.container h1{
+    margin-bottom: 32px;
+}
+
 .main-navigation{
     float:left;
     max-width: 670px;
@@ -78,7 +82,7 @@ body{
 
 ul.breadcrumbs{
     padding-left: 0;
-    margin-bottom: 44px;
+    margin-bottom: 63px;
 }
 
 .breadcrumbs-item{
@@ -92,11 +96,11 @@ ul.breadcrumbs{
 }
 
 h2.filter-title{
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 h2.filter-title:nth-of-type(2){
-    margin-top: 52px;
+    margin-top: 57px;
 }
 .input-check{
     display: block;
@@ -203,6 +207,7 @@ ul.page-number{
 }
 
 h1{
+    margin: 0;
     font-size: 30px;
 }
 
