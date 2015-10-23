@@ -18,7 +18,6 @@ body{
 .container{
     width: 940px;
     margin: 0 auto;
-    outline: 1px dotted blue;
 }
 
 .clearfix::after {
@@ -77,10 +76,109 @@ body{
     color: #fff;
 }
 
+ul.breadcrumbs{
+    padding-left: 0;
+    margin-bottom: 44px;
+}
+
+.breadcrumbs-item{
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.sidebar-catalog{
+    float: left;
+    max-width: 220px;
+}
+
+h2.filter-title{
+    margin-bottom: 30px;
+}
+
+h2.filter-title:nth-of-type(2){
+    margin-top: 52px;
+}
+.input-check{
+    display: block;
+}
+
+.sidebar-catalog a{
+    display: block;
+    margin-top: 52px;
+}
+
+.catalog-contant{
+    float: right;
+    padding: 0;
+    max-width: 700px;
+    font-size: 0;
+}
+
+.catalog-item{
+    display: inline-block;
+    font-size: 14px;
+    width: 220px;
+    height: 286px;
+    margin: 20px 20px;
+    margin-left: 0;
+    margin-top: 0;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+}
+
+.catalog-item:nth-child(3n){
+    margin-right: 0;
+}
+
+.catalog-item-description{
+    padding: 16px;
+    padding-top: 5px;
+}
+
+.catalog-item-description h1{
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: none;
+}
+
+.catalog-item-description h1 span{
+    display: block;
+    text-transform: uppercase;
+}
+
+.catalog-item-price{
+    font-size: 0;
+}
+
+.catalog-item-cost{
+    display: inline-block;
+    width: 109px;
+    font-size: 14px;
+}
+
+.catalog-item-price a{
+    display: inline-block;
+}
+
+.page-number{
+    list-style: none;
+    margin-bottom: 40px;
+    font-size: 0;
+}
+
+ul.page-number{
+    padding-left: 0;
+}
+
+.page-number li{
+    display: inline-block;
+    margin-right: 7px;
+    font-size: 14px;
+}
+
 .main-footer {
     background: url("../img/bg_footer.png") repeat-x 0 0;
     padding-top: 60px;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
     line-height: 24px;
     color: #ffffff;
 }
@@ -95,33 +193,20 @@ body{
     float: left;
 }
 
+.main-footer p{
+    margin-top: 0;
+}
+
 .footer-copyright {
     float: right;
     max-width: 320px;
 }
-/*
-.main-footer .container section{
-    float:left;
-    padding-top: 63px;
-    padding-bottom: 40px;
-    color: #ffffff;
-    line-height: 24px;
-}
-
-.footer-contacts{
-    max-width: 320px;
-    padding-right: 80px;
-}
-
-.footer-social{
-    padding-right: 240px;
-}
-*/
 
 h1{
     font-size: 30px;
 }
 
 h2{
+    margin: 0;
     font-size: 24px;
 }
