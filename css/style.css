@@ -1,11 +1,13 @@
-body{
-    min-width: 960px;
-    font-size: 14px;
-    line-height: normal;
-    color: #000000;
-    font-weight: normal;
-    font-family: "PT Sans NarrowBold", "PT Sans", "Arial", serif;
-    text-transform: uppercase;
+/**
+ *  ===========================================
+ *       Cлужебные правила
+ *  ===========================================
+**/
+
+.clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
 }
 
 @font-face {
@@ -15,195 +17,275 @@ body{
   src: url("../fonts/PTN77F.ttf");
 }
 
+
+
+/**
+ *  ===========================================
+ *       Сетка
+ *  ===========================================
+**/
+
+/*  ширина и центрирование
+-----------------------------------------------*/
+body{
+    min-width: 960px;
+}
+
 .container{
     width: 940px;
     margin: 0 auto;
 }
 
-.clearfix::after {
-    content: '';
-    display: table;
-    clear: both;
-}
-
-.inner-page{
-    background: url("../img/bg_catalog.png") repeat 0 0;
-}
-
+/*  правила шапки сайта
+-----------------------------------------------*/
 .main-header{
-    margin-bottom: 60px;
-    background: #000000;
-    color: #fff;
-}
-
-.container h1{
-    margin-bottom: 32px;
+    margin-bottom: 55px;
 }
 
 .main-navigation{
     float:left;
-    max-width: 670px;
+    width: 780px;
 }
 
-.main-navigation ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-size: 0;
-}
 
-.main-navigation li {
-    display: inline-block;
-    vertical-align: top;
-    font-size: 16px;
-}
+    .main-navigation ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 0;
+    }
 
-.main-navigation li a {
-    display: block;
-    padding: 26.5px 21px;
-    text-decoration: none;
-    color: #ffffff;
-}
+        .main-navigation li {
+            display: inline-block;
+            font-size: 16px;
+        }
+
+            .main-navigation a {
+                display: block;
+                padding: 26.5px 21px;
+                text-decoration: none;
+                color: #ffffff;
+            }
 
 .user-block {    
     float: right;
-    font-size: 0;
     max-width: 140px;
+    font-size: 0;
 }
 
-.user-block .login {
-    display: block;
-    padding: 26.5px 0;
-    padding-right: 21px;
-    font-size: 16px;
-    text-decoration: none;
-    color: #fff;
+    .user-block .login {
+        display: block;
+        padding: 26.5px 0;
+        padding-right: 21px;
+        font-size: 16px;
+        text-decoration: none;
+        color: #fff;
+    }
+
+
+/*  правила подвала сайта
+-----------------------------------------------*/
+.main-footer {
+    padding-top: 60px;
+    padding-bottom: 32px;
 }
 
-ul.breadcrumbs{
-    padding-left: 0;
-    margin-bottom: 63px;
-}
+    .footer-contacts {
+        float: left;
+        width: 320px;
+        margin-right: 80px;
+    }
 
-.breadcrumbs-item{
-    display: inline-block;
-    padding-right: 10px;
-}
+    .footer-social {
+        float: left;
+    }
 
+    .footer-copyright {
+        float: right;
+        max-width: 320px;
+    }
+
+
+/*  правила для страницы catalog.html
+------------------------------------------------*/
 .sidebar-catalog{
     float: left;
-    max-width: 220px;
+    width: 220px;
 }
+
+    .sidebar-catalog a{
+        display: block;
+        margin-top: 52px;
+    }
 
 h2.filter-title{
     margin-bottom: 40px;
 }
 
-h2.filter-title:nth-of-type(2){
-    margin-top: 57px;
-}
-.input-check{
-    display: block;
-}
+    h2.filter-title:nth-of-type(2){
+        margin-top: 57px;
+    }
 
-.sidebar-catalog a{
-    display: block;
-    margin-top: 52px;
-}
-
-.catalog-contant{
+.catalog-content{
     float: right;
+    width: 700px;
     padding: 0;
-    max-width: 700px;
     font-size: 0;
 }
 
-.catalog-item{
-    display: inline-block;
-    font-size: 14px;
-    width: 220px;
-    height: 286px;
-    margin: 20px 20px;
-    margin-left: 0;
-    margin-top: 0;
-    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
-}
+    .catalog-item{
+        display: inline-block;
+        font-size: 14px;
+        width: 220px;
+        height: 286px;
+        margin: 20px 20px;
+        margin-left: 0;
+        margin-top: 0;
+    }
 
-.catalog-item:nth-child(3n){
-    margin-right: 0;
-}
+    .catalog-item:nth-child(3n){
+        margin-right: 0;
+    }
 
-.catalog-item-description{
-    padding: 16px;
-    padding-top: 5px;
-}
+        .catalog-item-description{
+            padding: 16px;
+            padding-top: 5px;
+        }
 
-.catalog-item-description h1{
-    font-size: 14px;
-    line-height: 18px;
-    text-transform: none;
-}
+            .catalog-item-description h1{
+                font-size: 14px;
+                line-height: 18px;
+                text-transform: none;
+            }
 
-.catalog-item-description h1 span{
-    display: block;
-    text-transform: uppercase;
-}
+                .catalog-item-description h1 span{
+                    display: block;
+                }
 
-.catalog-item-price{
-    font-size: 0;
-}
+        .catalog-item-price{
+            font-size: 0; 
+            margin-top: 16px;
+        }
 
-.catalog-item-cost{
-    display: inline-block;
-    width: 109px;
-    font-size: 14px;
-}
+            .catalog-item-price a{
+                display: inline-block;
+            }
 
-.catalog-item-price a{
-    display: inline-block;
-}
+        .catalog-item-cost{
+            display: inline-block;
+            padding: 12px 4.5px;
+            width: 100px;
+            font-size: 14px;
+        }
 
 .page-number{
-    list-style: none;
+    padding-left: 0;
     margin-bottom: 40px;
     font-size: 0;
 }
 
-ul.page-number{
-    padding-left: 0;
+    .page-number li{
+        display: inline-block;
+        margin-right: 7px;
+        font-size: 14px;
+    }
+
+
+/*  правила для страницы catalog-item.html
+------------------------------------------------*/
+.photo-items{
+    float: left;
+    width: 460px;
+    margin: 0;
 }
 
-.page-number li{
+    .photo-items-big{
+        margin-bottom: 21px;
+    }
+
+
+    .photo-items-preview{
+        font-size: 0;
+        margin-bottom: 47px;
+    }
+
+        .photo-items-preview a{
+            display: inline-block;
+            width: 140px;
+            margin-right: 20px;
+        }
+
+            .photo-items-preview a:nth-child(3n){
+                margin-right: 0;
+            }
+
+.about-item{
+    float: right;
+    width: 390px;
+    margin-top: 24px;
+}
+
+    .about-item-status{
+        margin-bottom: 42px;
+    }
+        
+        .availabile-item{
+            float: left;
+        }
+
+        .articte-item{
+            float: right;
+        }
+
+    .about-item .catalog-item-price{
+        margin-top: 42px;
+        margin-bottom: 68px;
+    }
+
+
+/*  правила для страниц catalog.html и catalog-item.html
+------------------------------------------------*/
+.container > h1{
+    margin-bottom: 32px;
+}
+
+    .breadcrumbs{
+        padding-left: 0;
+        margin-bottom: 63px;
+    }
+
+        .breadcrumbs-item{
+            display: inline-block;
+            padding-right: 10px;
+        }
+
+.btn {
     display: inline-block;
-    margin-right: 7px;
+    padding: 12px 18px;
     font-size: 14px;
 }
 
-.main-footer {
-    background: url("../img/bg_footer.png") repeat-x 0 0;
-    padding-top: 60px;
-    padding-bottom: 30px;
-    line-height: 24px;
-    color: #ffffff;
+
+
+
+
+/**
+ *  ============================================
+ *       Оформление и декорирование
+ *  ============================================
+**/
+
+body{
+    font-size: 14px;
+    line-height: normal;
+    color: #000000;
+    font-weight: normal;
+    font-family: "PT Sans NarrowBold", "PT Sans", "Arial", serif;
+    text-transform: uppercase;
 }
 
-.footer-contacts {
-    float: left;
-    width: 320px;
-    margin-right: 80px;
-}
-
-.footer-social {
-    float: left;
-}
-
-.main-footer p{
-    margin-top: 0;
-}
-
-.footer-copyright {
-    float: right;
-    max-width: 320px;
+.inner-page{
+    background: url("../img/bg_catalog.png") repeat 0 0;
 }
 
 h1{
@@ -214,4 +296,71 @@ h1{
 h2{
     margin: 0;
     font-size: 24px;
+}
+
+.main-header{
+    background: #000000;
+    color: #fff;
+}
+
+.main-navigation ul {
+    list-style: none;
+}
+
+.main-navigation li {
+    vertical-align: top;
+}
+
+.main-navigation a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.user-block .login {
+    text-decoration: none;
+    color: #fff;
+}
+
+.catalog-item{
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+}
+
+.catalog-item-description h1{
+    text-transform: none;
+}
+
+.catalog-item-description h1 span{
+    text-transform: uppercase;
+}
+
+.catalog-item-cost{
+    vertical-align: top;
+    color: #000;
+    background: #e5e5e5;
+    text-align: center;
+}
+
+.btn {
+    font-size: 14px;
+    color: #fff;
+    background: #000;
+}
+
+.page-number{
+    list-style: none;
+}
+
+.main-footer {
+    background: url("../img/bg_footer.png") repeat-x 0 0;
+    line-height: 24px;
+    color: #ffffff;
+}
+
+.main-footer p{
+    margin-top: 0;
+    text-align: center;
+}
+
+.photo-items img{
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
 }
