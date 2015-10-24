@@ -63,7 +63,6 @@ body{
             .main-navigation a {
                 display: block;
                 padding: 26.5px 21px;
-                text-decoration: none;
                 color: #ffffff;
             }
 
@@ -263,6 +262,7 @@ h2.filter-title{
     display: inline-block;
     padding: 12px 18px;
     font-size: 14px;
+    text-decoration: none;
 }
 
 
