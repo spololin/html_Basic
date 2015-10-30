@@ -10,14 +10,6 @@
     clear: both;
 }
 
-@font-face {
-  font-family: "PT Sans NarrowBold";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/PTN77F.ttf");
-}
-
-
 
 /**
  *  ===========================================
@@ -39,7 +31,7 @@ body{
 /*  правила шапки сайта
 -----------------------------------------------*/
 .main-header{
-    margin-bottom: 55px;
+    margin-bottom: 60px;
 }
 
 .main-navigation{
@@ -63,30 +55,30 @@ body{
 
             .main-navigation a {
                 display: block;
-                padding: 26px 21px;
+                padding: 26px 20px;
                 color: #ffffff;
             }
 
 .user-block {    
     float: right;
     max-width: 140px;
-    font-size: 0;
 }
 
-    .user-block .login {
-        display: block;
-        padding: 26.5px 0;
-        padding-right: 21px;
+    .login {
+        display: inline-block;
+        padding: 26px 20px;
+        padding-left: 52px;
         font-size: 16px;
         text-decoration: none;
-        color: #fff;
+        vertical-align: top;
+        color: #ffffff;
     }
 
 
 /*  правила подвала сайта
 -----------------------------------------------*/
 .main-footer {
-    padding-top: 60px;
+    padding-top: 53px;
     padding-bottom: 40px;
 }
 
@@ -98,12 +90,21 @@ body{
 
     .footer-social {
         float: left;
+        text-align: center;
+    }
+
+    .footer-contacts a {
+      color: #fff;
     }
 
     .footer-copyright {
         float: right;
         max-width: 320px;
     }
+
+.footer-contacts a:hover {
+  text-decoration: none;
+}
 
 
 /*  правила для страницы catalog.html
@@ -115,7 +116,7 @@ body{
 
     .sidebar-catalog a{
         display: block;
-        margin-top: 52px;
+        margin-top: 57px;
     }
 
 h2.filter-title{
@@ -182,7 +183,7 @@ h2.filter-title{
 
 .page-number{
     padding-left: 0;
-    margin-bottom: 40px;
+    margin-bottom: 47px;
     font-size: 0;
 }
 
@@ -250,7 +251,7 @@ h2.filter-title{
 /*  правила для страниц catalog.html и catalog-item.html
 ------------------------------------------------*/
 .container > h1{
-    margin-bottom: 32px;
+    margin-bottom: 28px;
 }
 
     .breadcrumbs{
@@ -261,14 +262,33 @@ h2.filter-title{
 
         .breadcrumbs-item{
             display: inline-block;
-            padding-right: 10px;
+            margin-right: 40px;
             font-size: 14px;
+            color: #aba9a7;
         }
+        
+.breadcrumbs-link{
+    position: relative;
+    color: #000000;
+    text-decoration: none;
+}
+
+.breadcrumbs-link::after{
+    content: "";
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    background: #000000;
+    top: 5px;
+    right: -24px;
+    transform: rotate(45deg);
+}
 
 .btn {
     display: inline-block;
     padding: 12px 18px;
     font-size: 14px;
+    line-height: normal;
     text-decoration: none;
 }
 
@@ -287,7 +307,7 @@ body{
     line-height: normal;
     color: #000000;
     font-weight: normal;
-    font-family: "PT Sans NarrowBold", "PT Sans", "Arial", serif;
+    font-family: "PT Sans Narrow", "Arial", sans-serif;
     text-transform: uppercase;
 }
 
@@ -319,9 +339,51 @@ h2{
     color: #ffffff;
 }
 
+.main-navigation a.active{
+    position: relative;
+}
+
+.main-navigation a.active::after{
+    content: "";
+    position: absolute;
+    height: 4px;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    background: #ffffff;
+}
+
+.main-navigation a.active:hover::after{
+    background: inherit;
+}
+.main-navigation a:hover{
+    background: #242424;
+}
+
 .user-block .login {
+    position: relative;
     text-decoration: none;
     color: #fff;
+}
+
+.login:hover{
+    background: #242424;
+}
+
+.login::before{
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    width: 18px;
+    height: 18px;
+    background: transparent url("../img/sprite.png") no-repeat;
+    background-position: 0 -212px;
+    opacity: .3;
+}
+
+.login:hover::before {
+  opacity: 1;
 }
 
 .catalog-item{
@@ -348,22 +410,125 @@ h2{
     background: #000;
 }
 
+.btn:hover{
+    background: #663d15;
+}
+
+.btn:active{
+    background: #663d15;
+}
+
 .page-number{
     list-style: none;
 }
 
+.page-number a.active{
+    background: #ffffff;
+    color: #000000;
+    cursor: default;
+}
+
 .main-footer {
-    background: url("../img/bg_footer.png") repeat 0 0;
+    background: #232323 url("../img/bg_footer.png") repeat 0 0;
     box-shadow: inset 0 40px 40px -20px rgba(0,0,0,.9);
     line-height: 24px;
     color: #ffffff;
 }
 
 .main-footer p{
-    margin-top: 0;
+    margin: 0;
+    margin-bottom: 15px;
     text-align: center;
 }
 
 .photo-items img{
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+}
+
+.footer-contacts {
+  float: left;
+
+  width: 320px;
+  margin-right: 80px;
+}
+
+.footer-contacts a {
+  color: #fff;
+}
+
+.footer-social {
+  float: left;
+  text-align: center;
+}
+
+.footer-copyright {
+  float: right;
+
+  max-width: 320px;
+}
+
+.footer-contacts a:hover {
+  text-decoration: none;
+}
+
+.footer-social p {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.social-btn {
+  margin: 0 2px;
+  display: inline-block;
+  vertical-align: top;
+  width: 43px;
+  height: 43px;
+
+  font-size: 0;
+  text-decoration: none;
+
+  background: #000 url("../img/sprite.png") no-repeat center;
+}
+
+.social-btn:hover {
+    background-color: #fff;
+}
+
+.social-btn-vk {
+  background-position: 9px -968px;
+}
+
+.social-btn-fb {
+  background-position: 16px -691px;
+}
+
+.social-btn-inst {
+  background-position: 11px -832px;
+}
+
+.social-btn-vk:hover {
+  background-position: 9px -902px;
+}
+
+.social-btn-fb:hover {
+  background-position: 16px -619px;
+}
+
+.social-btn-inst:hover {
+  background-position: 11px -762px;
+}
+
+.footer-copyright p {
+  margin: 0;
+  margin-bottom: 15px;
+
+  text-align: center;
+}
+
+.footer-copyright .btn {
+    margin-right: 0;
+}
+
+.footer-copyright .btn:hover {
+  color: #000;
+  background: #fff;
 }
