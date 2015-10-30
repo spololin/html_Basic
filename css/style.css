@@ -362,6 +362,7 @@ h2.filter-title{
 
 .page-number{
     padding-left: 0;
+    margin-top: 44px;
     font-size: 0;
     list-style: none;
 }
