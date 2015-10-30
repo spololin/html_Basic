@@ -6,7 +6,6 @@ body{
     font-size: 14px;
     line-height: 16px;
     color: #000000;
-    font-weight: normal;
     text-transform: uppercase;
 }
 
@@ -98,12 +97,12 @@ body{
         .login::before{
             content: "";
             position: absolute;
-            top: 30px;
+            top: 28px;
             left: 20px;
             width: 18px;
             height: 18px;
             background: transparent url("../img/sprite.png") no-repeat;
-            background-position: 0 -212px;
+            background-position: -4px -443px;
             opacity: .3;
         }
 
@@ -162,7 +161,7 @@ body{
             font-size: 0;
             vertical-align: top;
             text-decoration: none;
-            background: #000 url("../img/sprite.png") no-repeat center;
+            background: #000000 url("../img/sprite.png") no-repeat center;
         }
 
             .social-btn:hover {
@@ -170,27 +169,27 @@ body{
             }
 
             .social-btn-vk {
-              background-position: 9px -968px;
+              background-position: 8px -77px;
             }
 
             .social-btn-fb {
-              background-position: 16px -691px;
+              background-position: 8px -110px;
             }
 
             .social-btn-inst {
-              background-position: 11px -832px;
+              background-position: 9px -145px;
             }
 
             .social-btn-vk:hover {
-              background-position: 9px -902px;
+              background-position: 8px -276px;
             }
 
             .social-btn-fb:hover {
-              background-position: 16px -619px;
+              background-position: 8px -327px;
             }
 
             .social-btn-inst:hover {
-              background-position: 11px -762px;
+              background-position: 9px -380px;
             }
 
     .footer-copyright {
@@ -258,12 +257,13 @@ input[type="checkbox"], input[type="radio"]{
         }
 
         input[type="radio"] + label::before{
-            background-position: 0 644px;
+            top: -2px;
+            background-position: -3px -25px;
         }
 
         input[type="checkbox"] + label::before{
             border: 2px solid #000000;
-            background-position: 0 65px;
+            background: none;
         }
 
         input[type="checkbox"]:checked + label::before,
@@ -279,11 +279,12 @@ input[type="checkbox"], input[type="radio"]{
         }
 
         input[type="checkbox"]:checked + label::before{
-            background-position: 0 0;
+            background-position: -3px 4px;
         }
 
         input[type="radio"]:checked + label::before{
-            background-position: 0 714px;
+            top: -2px;
+            background-position: -3px -58px;
         }
 
 h2.filter-title{
@@ -468,7 +469,7 @@ h2.filter-title{
 /*  правила для страниц catalog.html и catalog-item.html
 ------------------------------------------------*/
 .inner-page{
-    background: url("../img/bg_catalog.png") repeat 0 0;
+    background: #f8f5f2 url("../img/bg_catalog.png") repeat 0 0;
 }
 
     .breadcrumbs{
