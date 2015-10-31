@@ -223,6 +223,7 @@ body{
 
     .sidebar-catalog a{
         margin-top: 40px;
+        padding: 12px 29px;
     }
 
 input[type="checkbox"], input[type="radio"]{ 
