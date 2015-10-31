@@ -33,7 +33,7 @@
                 </ul>
             </nav>
             <div class="user-block">
-                <a href="#" class="login">Вход</a>
+                <a href="#" class="login" onclick="event.preventDefault();document.getElementById('login-form').classList.toggle('hidden');">Вход</a>
             </div>
         </div>
     </header>  
@@ -206,7 +206,7 @@
         </div>
     </footer>
     
-    <div class="login-form hidden">
+    <div class="login-form hidden" id="login-form">
         <form action="#" method="post" class="container">
             <h1 class="login-form-title">Личный кабинет</h1>
             <p class="login-form-text">Введите пожалуйста свой логин и пароль</p>
@@ -219,7 +219,7 @@
             </div>
             <button class="btn" type="submit">Войти</button>
         </form>
-        <button class="btn-close">Закрыть</button>
+        <button class="btn-close" onclick="document.getElementById('login-form').classList.toggle('hidden');">Закрыть</button>
     </div>
 </body>
 </html>

@@ -15,14 +15,14 @@ body{
 }
 
     .container > h1{
-        margin-bottom: 28px;
+        margin-bottom: 26px;
     }
 
 
 /*  правила шапки сайта
 -----------------------------------------------*/
 .main-header{
-    margin-bottom: 60px;
+    margin-bottom: 55px;
     background: #000000;
 }
 
@@ -46,7 +46,7 @@ body{
 
             .main-navigation a {
                 display: block;
-                padding: 26px 20px;
+                padding: 28px 20px;
                 color: #ffffff;
                 text-decoration: none;
             }
@@ -222,7 +222,7 @@ body{
 }
 
     .sidebar-catalog a{
-        margin-top: 43px;
+        margin-top: 40px;
     }
 
 input[type="checkbox"], input[type="radio"]{ 
@@ -308,11 +308,11 @@ input[type="checkbox"], input[type="radio"]{
             
         }
 h2.filter-title{
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
     h2.filter-title:nth-of-type(2){
-        margin-top: 43px;
+        margin-top: 40px;
     }
 
 .catalog-content{
@@ -370,7 +370,7 @@ h2.filter-title{
 
         .catalog-item-cost{
             display: inline-block;
-            padding: 13px 5px;
+            padding: 13px 4px;
             width: 100px;
             font-size: 14px;
             vertical-align: top;
@@ -494,7 +494,7 @@ h2.filter-title{
 
     .breadcrumbs{
         padding-left: 0;
-        margin-bottom: 55px;
+        margin-bottom: 50px;
         font-size: 0;
     }
 
@@ -543,11 +543,13 @@ h2.filter-title{
 h1{
     margin: 0;
     font-size: 30px;
+    line-height: 32px;
 }
 
 h2{
     margin: 0;
     font-size: 24px;
+    line-height: 26px;
 }
 
 .clearfix::after {
