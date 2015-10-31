@@ -59,7 +59,7 @@
                     <label for="brand2">Mr Natty</label>
                     <input class="input-check" type="checkbox" id="brand3" name="brand" checked>
                     <label for="brand3">Suavecito</label>
-                    <input class="input-check" type="checkbox" id="brand4" name="brand">
+                    <input class="input-check" type="checkbox" id="brand4" name="brand" disabled>
                     <label for="brand4">Malin+Goetz</label>
                     <input class="input-check" type="checkbox" id="brand5" name="brand">
                     <label for="brand5">Murray's</label>
@@ -71,7 +71,7 @@
                     <label for="group1">Бритвенные принадлежности</label>
                     <input class="input-radio" type="radio" id="group2" name="group" checked>
                     <label for="group2">Средства для ухода</label>
-                    <input class="input-radio" type="radio" id="group3" name="group">
+                    <input class="input-radio" type="radio" id="group3" name="group" disabled>
                     <label for="group3">Аксессуары</label>                    
 
                     <a href="#" class="btn">Показать</a>
@@ -207,14 +207,14 @@
     </footer>
     
     <div class="login-form hidden">
-        <form action="#" method="post">
-            <h2 class="login-form-title">Личный кабинет</h2>
+        <form action="#" method="post" class="container">
+            <h1 class="login-form-title">Личный кабинет</h1>
             <p class="login-form-text">Введите пожалуйста свой логин и пароль</p>
             <input class="login-input-user" type="text" name="login" placeholder="Логин">
             <input class="login-input-pass" type="password" name="password" placeholder="Пароль">
             <div class="login-options clearfix">
-                <input class="control control-check" type="checkbox" name="remember" checked>
-                <label class="login-label" for="remember">Запомните меня</label>
+                <input class="input-check" type="checkbox" id="remember" name="remember" checked>
+                <label for="remember">Запомните меня</label>
                 <a href="#">Я забыл пароль!</a>
             </div>
             <button class="btn" type="submit">Войти</button>

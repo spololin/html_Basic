@@ -233,9 +233,9 @@ input[type="checkbox"], input[type="radio"]{
     input[type="radio"] + label{
         display: block;
         position: relative;
-        margin: 20px 0;
-        margin-top: 0;
-        margin-left: 44px;
+        padding: 20px 0;
+        padding-top: 0;
+        padding-left: 44px;
         cursor: pointer;
     }
 
@@ -247,21 +247,25 @@ input[type="checkbox"], input[type="radio"]{
         input[type="radio"] + label::before{
             content: "";
             position: absolute;
-            top: -4px;
-            left: -44px;
+            top: -2px;
+            left: 0px;
             background: url("../img/sprite.png");
-            width: 20px;
-            height: 20px;
+            width: 16px;
+            height: 16px;
             vertical-align: top;
             margin-right: 15px;
         }
 
         input[type="radio"] + label::before{
+            width: 20px;
+            height: 20px;
             top: -2px;
             background-position: -3px -25px;
         }
 
         input[type="checkbox"] + label::before{
+            width: 16px;
+            height: 16px;
             border: 2px solid #000000;
             background: none;
         }
@@ -273,13 +277,16 @@ input[type="checkbox"], input[type="radio"]{
             width: 20px;
             height: 20px;
             top: -4px;
-            left: -44px;
+            left: 0px;
             background: url("../img/sprite.png");
             margin-right: 11px;
         }
 
         input[type="checkbox"]:checked + label::before{
-            background-position: -3px 4px;
+            background-position: -5px 2px;
+            width: 16px;
+            height: 16px;
+            top: -2px;
         }
 
         input[type="radio"]:checked + label::before{
@@ -287,6 +294,19 @@ input[type="checkbox"], input[type="radio"]{
             background-position: -3px -58px;
         }
 
+        input[type="checkbox"]:disabled + label,
+        input[type="radio"]:disabled + label{
+            color: #cfccca;
+            cursor: default;
+            
+        }
+
+        input[type="checkbox"]:disabled + label::before,
+        input[type="radio"]:disabled + label::before{
+            border-color: #cfccca;
+            cursor: default;
+            
+        }
 h2.filter-title{
     margin-bottom: 40px;
 }
@@ -538,4 +558,91 @@ h2{
 
 .hidden{
     display: none;
+}
+
+
+/*  правила формы login
+-----------------------------------------------*/
+
+.login-form{
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    margin-left: -230px;
+    width: 460px;
+    background: #f8f5f2 url("../img/bg_catalog.png") repeat 0 0;
+    box-shadow: 0 30px 50px 0 rgba(0,0,0,.75);
+}
+
+.login-form .container{
+    width: 300px;
+    margin: 55px auto;
+}
+
+.login-form h1{
+    line-height: 32px;
+    margin-bottom: 30px;
+}
+
+.login-form-text{
+    margin: 0;
+    margin-bottom: 17px;
+}
+
+.login-form input{
+    margin-bottom: 9px;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 15px 17px;
+    background-position: 95% 50%;
+}
+
+.login-form input:focus{
+     border-color: #977b5f;
+}
+
+.login-form .login-input-user{
+    background-image: url("../img/icon-user.png");
+}
+
+.login-form .login-input-pass{
+    background-image: url("../img/icon-lock.png");
+}
+
+.login-options label{
+    float: left; 
+}
+
+.login-options input[type="checkbox"] + label{
+    padding-left: 32px;
+    padding-bottom: 20px;
+}
+
+.login-options a{
+    float: right;
+    color: #000000;
+}
+
+.login-form .btn{
+    width: 100%;
+    border: none;
+}
+
+.btn-close{
+    position: absolute;
+    background: url("../img/sprite.png") no-repeat;
+    background-position: -1px -246px;
+    top: 9px;
+    width: 23px;
+    height: 23px;
+    border: none;
+    right: -36px;
+    font-size: 0;
 }
