@@ -15,7 +15,7 @@ body{
 }
 
     .container > h1{
-        margin-bottom: 26px;
+        margin-bottom: 22px;
     }
 
 
@@ -114,7 +114,7 @@ body{
 /*  правила подвала сайта
 -----------------------------------------------*/
 .main-footer {
-    padding-top: 53px;
+    padding-top: 60px;
     padding-bottom: 40px;
     margin-top: 47px;
     background: #232323 url("../img/bg_footer.png") repeat 0 0;
@@ -309,7 +309,7 @@ input[type="checkbox"], input[type="radio"]{
             
         }
 h2.filter-title{
-    margin-bottom: 30px;
+    margin-bottom: 32px;
 }
 
     h2.filter-title:nth-of-type(2){
@@ -321,6 +321,7 @@ h2.filter-title{
     width: 700px;
     padding: 0;
     font-size: 0;
+    margin-top: 5px;
 }
 
     .catalog-item{
@@ -341,7 +342,7 @@ h2.filter-title{
 
         .catalog-item-description{
             padding: 16px;
-            padding-top: 5px;
+            padding-top: 9px;
         }
 
             .catalog-item-description > a{
@@ -382,7 +383,7 @@ h2.filter-title{
 
 .page-number{
     padding-left: 0;
-    margin-top: 44px;
+    margin-top: 24px;
     font-size: 0;
     list-style: none;
 }
