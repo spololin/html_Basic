@@ -422,6 +422,7 @@ h2.filter-title{
 
     .photo-items-preview{
         font-size: 0;
+        line-height: 0;
     }
 
         .photo-items-preview a{
