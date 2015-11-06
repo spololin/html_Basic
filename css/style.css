@@ -663,3 +663,862 @@ h2{
     right: -36px;
     font-size: 0;
 }
+
+body {
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "PT Sans Narrow", sans-serif;
+
+  /* обычно так не делают, но здесь такой макет */
+  font-weight: 700;
+  text-transform: uppercase;
+
+  color: #fff;
+
+  min-width: 960px;
+  background: #111 url("img/body-bg.jpg") no-repeat center top;
+}
+
+/* Переопределение фона для внутренних */
+.inner-page {
+  color: #000;
+  background: #f8f3f0 url("img/pattern-white.jpg") repeat;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.main-header {
+  margin-bottom: 60px;
+
+  color: white; /* лучше явно прописать цвет для хедера */
+  background: #000;
+}
+
+/* Переопределение отступа для внутренних */
+.inner-page .main-header {
+  margin-bottom: 55px;
+}
+
+.main-navigation {
+  float: left;
+
+  width: 780px;
+}
+
+.user-block {
+  float: right;
+
+  max-width: 140px;
+}
+
+.main-navigation ul {
+  margin: 0;
+  padding: 0;
+
+  font-size: 0;
+  list-style: none;
+}
+
+.main-navigation li {
+  display: inline-block;
+
+  font-size: 16px;
+  line-height: 20px;
+  vertical-align: top;
+}
+
+.main-navigation a {
+  display: block;
+  padding: 25px 20px;
+
+  text-decoration: none;
+  color: #fff;
+}
+
+.main-navigation a:hover {
+  background: #242424;
+}
+
+.main-navigation .active a {
+  position: relative;
+}
+
+.main-navigation .active a:hover {
+  background: none;
+}
+
+.main-navigation .active a:after {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+
+  height: 5px;
+
+  background: white;
+}
+
+.login {
+  position: relative;
+
+  display: inline-block;
+  vertical-align: top;
+  padding: 25px 20px;
+  padding-left: 50px;
+
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+
+  color: #fff;
+}
+
+.login:hover {
+  background: #242424;
+}
+
+.login:before {
+  content: "";
+
+  position: absolute;
+  top: 28px;
+  left: 20px;
+
+  width: 18px;
+  height: 18px;
+
+  background: transparent url("img/sprite.png") no-repeat;
+  background-position: 0 -212px;
+}
+
+.login:hover:before {
+  opacity: .3;
+}
+
+.logo {
+  width: 368px;
+  height: 204px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+.logo img {
+  width: 368px;
+  height: 204px;
+}
+
+.features-row {
+  margin-bottom: 80px;
+}
+
+.features-item {
+  float: left;
+
+  width: 300px;
+  margin-right: 20px;
+
+  text-align: center;
+}
+
+.features-item:last-child {
+   margin-right: 0;
+}
+
+.features-title {
+  position: relative;
+
+  padding-bottom: 50px;
+  margin-bottom: 30px;
+
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.features-item p {
+  margin: 10px;
+}
+
+.features-title:after {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-left: -10px;
+
+  background: #fff;
+  transform: rotate(45deg);
+}
+
+.index-content {
+  margin-bottom: 35px;
+  padding: 50px 80px;
+
+  color: #000;
+  background:
+    url("img/index-content-shadow.png") no-repeat center,
+    #f8f5f2 url("img/pattern-white.jpg");
+}
+
+.content-column-left {
+  width: 350px; /* спасибо дизайнеру */
+}
+
+.content-column-right {
+  width: 300px;
+}
+
+.content-column-left {
+  float: left;
+}
+
+.content-column-right {
+  float: right;
+}
+
+.content-column-title {
+  margin: 0;
+  margin-bottom: 35px;
+
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.news-preview {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.news-preview li {
+  margin-bottom: 25px;
+}
+
+.news-preview time {
+  text-transform: none;
+}
+
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px 33px;
+  margin-right: 16px;
+
+  font-size: 14px;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 700;
+  line-height: 24px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+
+  color: #fff;
+  background: #000;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:active {
+  background: #663d15;
+}
+
+.btn:disabled {
+  cursor: default;
+  opacity: .5;
+}
+
+.btn:disabled:hover {
+  background: #000;
+}
+
+.gallery {
+  position: relative;
+  height: 260px;
+}
+
+.gallery-content {
+  height: 164px;
+  margin: 0;
+
+  border: 7px solid white;
+  background: #ccc;
+}
+
+.gallery-content img {
+  width: 286px;
+  height: 164px;
+}
+
+.gallery .btn {
+  position: absolute;
+  bottom: 0;
+
+  width: 140px;
+  margin: 0;
+}
+
+.gallery-prev {
+  left: 0;
+}
+
+.gallery-next {
+  right: 0;
+}
+
+.index-content p {
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.appointment-form  input {
+  float: left;
+
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 106px;
+  padding: 10px 15px;
+  border: 2px solid #000;
+
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+
+  color: #000;
+  background: #f9f6f3;
+  outline: none;
+}
+
+.appointment-form  input:focus {
+  border: 2px solid #663d15;
+}
+
+.appointment-form  input:nth-child(2n) {
+  margin-right: 0;
+}
+
+.appointment-form .btn {
+  clear: both;
+  width: 100%;
+}
+
+
+/* Стили внутренних страниц */
+.inner-page-title {
+  margin-bottom: 55px;
+}
+
+.inner-page-title h1 {
+  margin: 0;
+  margin-bottom: 20px;  
+  padding: 0;
+  
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumbs li {
+  position: relative;
+
+  display: inline;
+  padding-right: 40px;
+}
+
+.breadcrumbs li:after {
+  content: "";
+  
+  position: absolute;
+  top: 6px;
+  right: 15px;
+
+  width: 8px;
+  height: 8px;
+    
+  background: #000;
+  transform: rotate(45deg);
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: #000;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs .current {
+  color: #aba9a7;
+}
+
+.breadcrumbs .current:after {
+  display: none;
+}
+
+/* Общие стили для контентных тегов */
+.inner-content {
+  margin-bottom: 75px;
+}
+
+.inner-content h2 {
+  margin-top: 60px;
+  margin-bottom: 30px;
+  
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.inner-content p {
+  margin: 14px 0;
+}
+
+.inner-content table {
+  border-collapse: collapse;
+}
+
+.inner-content td {
+  padding: 10px 15px;
+  border: 2px solid black;
+}
+
+/* Особые стили для контентных тегов */
+.big-heading {
+  margin-top: 55px;
+  margin-bottom: 65px;
+    
+  text-align: center;
+}
+
+.big-heading h2 {
+  position: relative;
+  z-index:2;
+    
+  display: inline;
+  margin: 0;
+  padding: 0 25px;
+    
+  font-size: 48px;
+  line-height: 48px;
+  text-align: center;
+    
+  background: red; /* заменить в конце на след. строку */
+  background: #f8f3f0 url("img/pattern-white.jpg") repeat;
+}
+
+.big-heading:after {
+  content: "";
+    
+  position: relative;
+  top: -25px;
+  z-index: 1;
+    
+  display: block;
+  border-bottom: 2px solid black;
+}
+
+.custom-list-1 {
+  margin: 14px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.custom-list-1 li {
+  position: relative;
+
+  margin-bottom: 15px;
+  padding-left: 20px;
+}
+
+.custom-list-1 li:before {
+  content: "";
+  
+  position: absolute;
+  top: 8px;
+  left: 0;
+
+  width: 8px;
+  height: 8px;  
+
+  background: #000;
+  transform: rotate(45deg);
+}
+
+.prices-table {
+    width: 100%;
+}
+
+.prices-table td {
+    width: 50%;
+}
+
+.prices-table td:last-child {
+  text-align: center;
+}
+
+.short-text {
+  padding-right: 80px;
+}
+
+/* Колонки для контента */
+.inner-content-columns {
+    margin: 60px 0;
+}
+
+.inner-content-column-left,
+.inner-content-column-right {
+  width: 460px;
+}
+
+.inner-content-column-left {
+  float: left;
+}
+
+.inner-content-column-right {
+  float: right;
+}
+
+.inner-content-column-left *:first-child,
+.inner-content-column-right *:first-child {
+  margin-top: 0;
+}
+.inner-content-column-left *:last-child,
+.inner-content-column-right *:last-child {
+  margin-bottom: 0;
+}
+
+
+.main-footer {
+  margin-top: 60px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  
+  color: white; /* лучше явно прописать везде для футера */
+  background: #252525 url("img/pattern-black.jpg");
+}
+
+.footer-contacts {
+  float: left;
+
+  width: 320px;
+  margin-right: 80px;
+}
+
+.footer-contacts a {
+  color: #fff;
+}
+
+.footer-social {
+  float: left;
+  text-align: center;
+}
+
+.footer-copyright {
+  float: right;
+
+  max-width: 320px;
+}
+
+.footer-contacts a:hover {
+  text-decoration: none;
+}
+
+.footer-social p {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.social-btn {
+  margin: 0 2px;
+  display: inline-block;
+  vertical-align: top;
+  width: 43px;
+  height: 43px;
+
+  font-size: 0;
+  text-decoration: none;
+
+  background: #000 url("img/sprite.png") no-repeat center;
+}
+
+.social-btn:hover {
+    background-color: #fff;
+}
+
+.social-btn-vk {
+  background-position: 9px -968px;
+}
+
+.social-btn-fb {
+  background-position: 16px -691px;
+}
+
+.social-btn-inst {
+  background-position: 11px -832px;
+}
+
+.social-btn-vk:hover {
+  background-position: 9px -902px;
+}
+
+.social-btn-fb:hover {
+  background-position: 16px -619px;
+}
+
+.social-btn-inst:hover {
+  background-position: 11px -762px;
+}
+
+.footer-copyright p {
+  margin: 0;
+  margin-bottom: 15px;
+
+  text-align: center;
+}
+
+.footer-copyright .btn {
+    margin-right: 0;
+}
+
+.footer-copyright .btn:hover {
+  color: #000;
+  background: #fff;
+}
+
+/* Всплывающая форма */
+.modal-content {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: none;
+
+  width: 300px;
+  margin-top: 150px;
+  margin-top: 80px;
+  margin-left: -230px;
+  padding: 50px 80px;
+
+  color: black;
+  background: #f8f3f0 url("img/pattern-white.jpg");
+  box-shadow: 0 30px 50px rgba(0,0,0,.7);
+}
+
+.modal-content-map {
+  display: none;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  width: 766px;
+  height: 561px;
+  margin-left: -390px;
+  margin-top: -360px;
+  border: 7px solid white;
+
+  background: #e9e5dc url("img/map.png");
+  box-shadow: 0 30px 50px rgba(0,0,0,.7);
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+  70% {
+    transform: translateY(30px);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+  70% {
+    transform: translateY(30px);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.modal-content-show {
+  display: block;
+  -webkit-animation: bounce 0.6s;
+  animation: bounce 0.6s;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
+@-webkit-keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
+.modal-error {
+  -webkit-animation: shake 0.6s;
+  animation: shake 0.6s;
+}
+
+.modal-content-close {
+  position: absolute;
+  top: 0;
+  right: -50px;
+
+  width: 40px;
+  height: 40px;
+  border: 0;
+  outline: 0;
+
+  font-size: 0;
+  cursor: pointer;
+  background: url("img/sprite.png") no-repeat center;
+  background-position: 10px -130px;
+}
+
+.modal-content h2 {
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.modal-content p {
+  margin: 0;
+  margin-bottom: 14px;
+}
+
+.modal-content .login-form {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 236px;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  padding-right: 40px;
+
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+
+  color: #000;
+  border: 2px solid #000;
+  outline: none;
+  background: #f9f6f3;
+}
+
+.login-form input:focus {
+/*  border-color: #663d15;*/
+  border-color: red;
+}
+
+.login-form input.icon-user {
+  background-image: url("img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: 100% -1095px;
+}
+
+.login-form input.icon-password {
+  background-image: url("img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: 100% -329px;
+}
+
+.login-form .restore {
+  float: right;
+  color: #000;
+}
+
+.login-form .btn {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.login-form input[type="checkbox"] {
+  display: none;
+}
+
+.login-form input[type="checkbox"] + label {
+  position: relative;
+
+  display: inline-block;
+  padding-left: 30px;
+
+  cursor: pointer;
+  vertical-align: top;
+}
+
+.login-form input[type="checkbox"] + label:hover {
+  color: #663d15;
+}
+
+.login-form input[type="checkbox"] + label::before {
+  content: "";
+
+  position: absolute;
+  top: 2px;
+  left: 0;
+
+  width: 17px;
+  height: 17px;
+  border: 2px solid #000;
+}
+
+.login-form input[type="checkbox"]:checked + label::before {
+  background: url("img/sprite.png") no-repeat;
+  background-position: -1px -1px;
+}
